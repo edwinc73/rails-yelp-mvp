@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Restaurants List:</h1>
+  <hr>
+  <% @restaurants.each do |restaurant| %>
+  <div class="my-2">
+  <div class="d-flex align-items-center">
+    <h2><%= restaurant.name %></h2>
+    <p class="px-4 m-0"><%= restaurant.category %></p>
+  </div>
+    <%= link_to "See Details", restaurant_path(restaurant) %>
+    <hr>
+  </div>
+  <% end %>
+
+  <div class="actions">
+  <p><%= link_to "Add Restaurant", new_restaurant_path %></p>
+  </div>
+</div>
